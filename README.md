@@ -1,5 +1,7 @@
 # Hackaton IDP - 27/05/2023
 
+https://github.com/vitorlvr/reggaethon_gdp
+
 ## Nome dos integrantes:
 - Tiago de Jesus Chehab – 2211194
 - João Gabriel Abreu Macedo – 2311070
