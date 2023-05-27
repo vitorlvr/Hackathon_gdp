@@ -5,11 +5,26 @@ import {
   View,
   Pressable,
   ImageBackground,
-  Image
+  Image,
+  TouchableOpacity
 } from "react-native";
+import Carrinhop from "./Carrinhop";
+import TiposDeProdutos from "./TiposDeProdutos";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
+import { useNavigation } from '@react-navigation/native';
 
 const TelaDeTiposDeProduto = () => {
+
+  const navigation = useNavigation();
+
+  const carrinho = () => {
+    navigation.navigate('Carrinhop');
+  };
+
+  const tiposDeProdutos = () => {
+    navigation.navigate('TiposDeProdutos');
+  };
+
   return (
     <ImageBackground
       style={styles.telaDeTiposDeProduto}
@@ -26,11 +41,13 @@ const TelaDeTiposDeProduto = () => {
             />
             <Text style={[styles.cantina, styles.cantinaFlexBox]}>cantina</Text>
           </View>
-          <Image
-            style={styles.mingcutemenuFillIcon}
-            contentFit="cover"
-            source={require("../assets/mingcutemenufill.png")}
-          />
+          <TouchableOpacity onPress={carrinho}>
+            <Image
+              style={styles.mingcutemenuFillIcon}
+              contentFit="cover"
+              source={require("../assets/mingcutemenufill.png")}
+            />
+          </TouchableOpacity>
         </View>
         <View style={styles.oQueVocVaiComerHojeParent}>
           <Text
@@ -39,7 +56,7 @@ const TelaDeTiposDeProduto = () => {
 😋`}</Text>
           <View style={styles.frameGroup}>
             <View style={styles.frameContainer}>
-              <Pressable style={styles.psmilkshakeParent}>
+              <TouchableOpacity style={styles.psmilkshakeParent} onPress={tiposDeProdutos}>
                 <Image
                   style={styles.psmilkshakeIcon}
                   contentFit="cover"
@@ -52,8 +69,8 @@ const TelaDeTiposDeProduto = () => {
                   >{`Naturais e feitos
 na hora`}</Text>
                 </View>
-              </Pressable>
-              <Pressable style={styles.parentSpaceBlock}>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.parentSpaceBlock} onPress={tiposDeProdutos}>
                 <Image
                   style={styles.uilfoodIcon}
                   contentFit="cover"
@@ -66,10 +83,10 @@ na hora`}</Text>
                   >{`O melhor do
 nordeste`}</Text>
                 </View>
-              </Pressable>
+              </TouchableOpacity>
             </View>
             <View style={[styles.frameView, styles.frameViewSpaceBlock]}>
-              <Pressable style={styles.phbowlFoodParent}>
+              <TouchableOpacity style={styles.phbowlFoodParent} onPress={tiposDeProdutos}>
                 <Image
                   style={styles.phbowlFoodIcon}
                   contentFit="cover"
@@ -82,12 +99,12 @@ nordeste`}</Text>
                   >{`para quem gosta
 de milho`}</Text>
                 </View>
-              </Pressable>
-              <Pressable
+              </TouchableOpacity>
+              <TouchableOpacity
                 style={[
                   styles.fluentfoodPizza24RegularParent,
                   styles.parentSpaceBlock,
-                ]}
+                ]} onPress={tiposDeProdutos}
               >
                 <Image
                   style={styles.fluentfoodPizza24RegularIcon}
@@ -101,9 +118,9 @@ de milho`}</Text>
                   >{`Da França para
 seu coração`}</Text>
                 </View>
-              </Pressable>
+              </TouchableOpacity>
             </View>
-            <Pressable style={styles.frameViewSpaceBlock}>
+            <TouchableOpacity style={styles.frameViewSpaceBlock} onPress={tiposDeProdutos}>
               <Image
                 style={styles.fluentfoodEgg16RegularIcon}
                 contentFit="cover"
@@ -116,7 +133,7 @@ seu coração`}</Text>
                 >{`O ovo veio primeiro
 que a galinha`}</Text>
               </View>
-            </Pressable>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -144,12 +161,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   parentSpaceBlock: {
-    marginLeft: 51,
+    marginLeft: 81,
     alignItems: "center",
   },
   idIdp1Icon: {
     height: 42,
-    width: 42,
+    width: 52,
   },
   cantina: {
     fontSize: FontSize.size_base,

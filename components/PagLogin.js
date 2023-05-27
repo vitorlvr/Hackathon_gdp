@@ -1,9 +1,19 @@
 import * as React from "react";
-import { Text, StyleSheet, View, TextInput, Pressable, Image  } from "react-native";
+import { Text, StyleSheet, View, TextInput, Pressable, Image, TouchableOpacity } from "react-native";
 import { Color, FontFamily, FontSize, Padding } from "../GlobalStyles";
+import { useNavigation } from '@react-navigation/native';
+import CadastroIcon from "../screens/CadastroIcon";
 
 const PagLogin = () => {
+  const navigation = useNavigation();
+
+  const cadastro = () => {
+    navigation.navigate('CadastroIcon');
+  };
+  
   return (
+
+
     <View style={styles.logoParent}>
       <View style={styles.logo}>
         <View style={[styles.cantinaParent, styles.entrarFlexBox1]}>
@@ -32,9 +42,11 @@ const PagLogin = () => {
       <View style={[styles.entrar, styles.entrarFlexBox]}>
         <Text style={[styles.entrar1, styles.senhaTypo]}>entrar</Text>
       </View>
-      <Text style={[styles.aindaNo, styles.senhaTypo]}>
-        ainda não é usuário?
-      </Text>
+      <TouchableOpacity onPress={cadastro}>
+        <Text style={[styles.aindaNo, styles.senhaTypo]}>
+          ainda não é usuário?
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, Text, View, Pressable, Image } from "react-native";
+import { StyleSheet, Text, View, Pressable, Image, TouchableOpacity } from "react-native";
 import CartaoProduto from "./CartaoProduto";
 import { FontSize, FontFamily, Color, Border, Padding } from "../GlobalStyles";
 
@@ -23,13 +23,13 @@ const AllProducts = () => {
             </Text>
             <Text style={[styles.x, styles.xTypo]}>1x</Text>
           </View>
-          <View style={styles.fontistotrash}>
+          <TouchableOpacity style={styles.fontistotrash}>
             <Image
               style={styles.vectorIcon}
               contentFit="cover"
               source={require("../assets/vector.png")}
             />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
       <CartaoProduto crepeDeFrangoMarginTop={17} />

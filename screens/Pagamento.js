@@ -1,18 +1,28 @@
 import * as React from "react";
 import { Pressable, StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { Color, FontFamily, FontSize, Padding, Border } from "../GlobalStyles";
+import { useNavigation } from '@react-navigation/native';
+import TelaDeTiposDeProduto from "./TelaDeTiposDeProduto";
+
 
 const Pagamento = () => {
+
+  const navigation = useNavigation();
+
+  const voltaMenu = () => {
+    navigation.navigate('TiposDeProdutos');
+  };
+  
   return (
     <View style={styles.pagamento}>
       <View style={styles.topo}>
-        <Pressable style={styles.seta}>
+        <TouchableOpacity style={styles.seta} onPress={voltaMenu}>
           <Image
             style={styles.containerSetaIcon}
             contentFit="cover"
             source={require("../assets/container-seta.png")}
           />
-        </Pressable>
+        </TouchableOpacity>
       </View>
       <Text style={[styles.total, styles.totalTypo]}>total</Text>
       <Text style={[styles.rXxxx, styles.totalTypo]}>R$: xx.xx</Text>

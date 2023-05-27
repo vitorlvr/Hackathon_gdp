@@ -1,9 +1,28 @@
 import * as React from "react";
-import { StyleSheet, View, Pressable, Text, Image } from "react-native";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import FrameComponent from "../components/FrameComponent";
 import { Border, Color, Padding, FontSize, FontFamily } from "../GlobalStyles";
+import { useNavigation } from '@react-navigation/native';
+import TelaDeTiposDeProduto from "./TelaDeTiposDeProduto";
+import Pagamento from "./Pagamento";
+import Carrinhop from "./Carrinhop";
 
 const TiposDeProdutos = () => {
+
+  const navigation = useNavigation();
+
+  const voltaMenu = () => {
+    navigation.navigate('TelaDeTiposDeProduto');
+  };
+
+  const checkout = () => {
+    navigation.navigate('Pagamento');
+  };
+
+  const carrinho = () => {
+    navigation.navigate('Carrinhop');
+  };
+
   return (
     <View style={styles.tiposDeProdutos}>
       <Image
@@ -18,19 +37,21 @@ const TiposDeProdutos = () => {
         <FrameComponent sucoDeMaMarginTop={10} />
       </View>
       <View style={[styles.topo, styles.topoFlexBox]}>
-        <Pressable style={[styles.seta, styles.setaFlexBox]}>
+        <TouchableOpacity style={[styles.seta, styles.setaFlexBox]} onPress={voltaMenu}>
           <Image
             style={styles.containerSetaIcon}
             contentFit="cover"
             source={require("../assets/container-seta.png")}
           />
-        </Pressable>
+        </TouchableOpacity>
         <View style={[styles.cartContainer, styles.setaFlexBox]}>
+        <TouchableOpacity onPress={carrinho}>
           <Image
             style={styles.solarcartOutlineIcon}
             contentFit="cover"
             source={require("../assets/solarcartoutline.png")}
           />
+        </TouchableOpacity>
           <Image
             style={styles.cartContainerChild}
             contentFit="cover"
@@ -38,9 +59,9 @@ const TiposDeProdutos = () => {
           />
         </View>
       </View>
-      <View style={[styles.pagarWrapper, styles.topoFlexBox]}>
+      <TouchableOpacity style={[styles.pagarWrapper, styles.topoFlexBox]} onPress={checkout}>
         <Text style={styles.pagar}>ir para checkout</Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -57,6 +78,7 @@ const styles = StyleSheet.create({
   topoFlexBox: {
     justifyContent: "space-between",
     alignItems: "center",
+    marginHorizontal: 10,
     flexDirection: "row",
     position: "absolute",
     overflow: "hidden",
@@ -73,7 +95,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   frameParent: {
-    marginTop: -245.5,
+    marginTop: -275.5,
     marginLeft: -147,
     borderRadius: 17,
     backgroundColor: "rgba(141, 178, 234, 0.7)",
@@ -111,9 +133,10 @@ const styles = StyleSheet.create({
     paddingVertical: Padding.p_9xs,
   },
   topo: {
-    marginTop: -369,
-    marginLeft: -138.5,
-    width: 277,
+    marginTop: -349,
+    marginLeft: -141,
+    alignItems: 'center',
+    width: 287,
     height: 35,
     left: "50%",
     top: "50%",

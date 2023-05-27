@@ -1,29 +1,45 @@
 import * as React from "react";
-import { Pressable, Text, StyleSheet, View, Image  } from "react-native";
+import { Pressable, Text, StyleSheet, View, Image, TouchableOpacity } from "react-native";
 import AllProducts from "../components/AllProducts";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
+import { useNavigation } from '@react-navigation/native';
+import TelaDeTiposDeProduto from "./TelaDeTiposDeProduto";
+import Pagamento from "./Pagamento";
 
 const Carrinhop = () => {
+  
+  const navigation = useNavigation();
+
+  const telaProdutos = () => {
+    navigation.navigate('TelaDeTiposDeProduto');
+  };
+  
+  const pagamento = () => {
+    navigation.navigate('Pagamento');
+  };
+
   return (
     <Pressable style={styles.carrinhop}>
-      <Pressable style={[styles.irParaPagamento, styles.cartContainerFlexBox]}>
+      <TouchableOpacity style={[styles.irParaPagamento, styles.cartContainerFlexBox]} onPress={pagamento}>
         <Text style={styles.irParaPagamento1}>Ir para pagamento</Text>
-      </Pressable>
+      </TouchableOpacity>
       <AllProducts />
       <View style={[styles.topo, styles.topoFlexBox]}>
-        <Pressable style={[styles.seta, styles.topoFlexBox]}>
+        <TouchableOpacity style={[styles.seta, styles.topoFlexBox]} onPress={telaProdutos}>
           <Image
             style={styles.containerSetaIcon}
             contentFit="cover"
             source={require("../assets/container-seta.png")}
           />
-        </Pressable>
+        </TouchableOpacity>
         <View style={[styles.cartContainer, styles.cartContainerFlexBox]}>
+        <TouchableOpacity>
           <Image
             style={styles.solarcartOutlineIcon}
             contentFit="cover"
             source={require("../assets/solarcartoutline.png")}
           />
+        </TouchableOpacity>
           <Image
             style={styles.cartContainerChild}
             contentFit="cover"
@@ -96,7 +112,7 @@ const styles = StyleSheet.create({
   },
   topo: {
     marginTop: -360,
-    marginLeft: -138.5,
+    marginLeft: -145,
     top: "50%",
     width: 277,
     justifyContent: "space-between",
