@@ -25,3 +25,5 @@ Durante a prototipagem foram criadas oito telas, que sustentariam a função pri
 Nas primeiras horas, cada membro da equipe estava focado nas suas devidas atividades, e portanto foi feito um repositório compartilhado no github que visava a facilidade na interação e no compartilhamento dos códigos entre os integrantes. Foi necessário o auxílio dos mentores, em diversas ocasiões, para melhor entendimento das linguagens e das funcionalidades que eram necessárias.
 
 Durante à noite os membros Petrus e João voltaram para suas devidas residências, retornando a faculdade logo pela manhã. Pela madrugada, o integrante Tiago Chehab, terminou sua parte de relacionar o Javascript com o backend, entretanto houve um problema na conexão do API que resultou na demora do upload do segundo API no github. No decorrer da noite, Tiago ajudou Vitor no processo de desenvolvimento do aplicativo, auxiliando nas funções e nos reacts necessários.
+
+Pela manhã, os integrantes que não passaram à noite na faculdade, chegaram e concluíram suas devidas partes. Desta forma, durante a manhã e tarde, houve a consolidação de todas as partes e gerando o projeto que desenvolvemos.
