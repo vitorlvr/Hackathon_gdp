@@ -1,10 +1,10 @@
 # Hackaton IDP - 27/05/2023
 
 ## Nome dos integrantes:
-Tiago de Jesus Chehab – 2211194
-João Gabriel Abreu Macedo – 2311070
-Petrus Davi de Oliveira Sampaio – 2211132
-Vitor Souza Oliveira – 2211014
+- Tiago de Jesus Chehab – 2211194
+- João Gabriel Abreu Macedo – 2311070
+- Petrus Davi de Oliveira Sampaio – 2211132
+- Vitor Souza Oliveira – 2211014
 
 ## Relatório Hackathon IDP
 Durante os dias 25, 26 e 27 de maio de 2023, os cursos de tecnologia  da faculdade IDP se  organizaram para o evento do Hackathon, sendo um evento motivado para a melhoria da própria instituição. O evento foi dividido em grupos de quatro estudantes de qualquer semestre, e assim foi criado nosso grupo.
