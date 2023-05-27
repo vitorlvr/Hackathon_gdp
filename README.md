@@ -15,9 +15,10 @@ Portanto, o consenso do grupo foi desenvolver um aplicativo simples e prático q
 
 Desta forma nossa equipe se dividiu em algumas funções:
 
-Vitor: ficou responsável por criar o aplicativo e desenvolver suas funções, visto que o mesmo já tinha experiência com esse tipo de problema.
-Tiago: ficou responsável por relacionar as API’S do site que foi dado, com o node.js, para assim, ser feito o relacionamento com o front end.
-João e Petrus: ficaram responsáveis por fazer a modelagem do aplicativo e os designs, além das interações de usuário.
+- Vitor: ficou responsável por criar o aplicativo e desenvolver suas funções, visto que o mesmo já tinha experiência com esse tipo de problema.
+- Tiago: ficou responsável por relacionar as API’S do site que foi dado, com o node.js, para assim, ser feito o relacionamento com o front end.
+- João e Petrus: ficaram responsáveis por fazer a modelagem do aplicativo e os designs, além das interações de usuário.
+
 Para desenvolver nosso projeto foi usado o Javascript para relacionar o frontend com o backend, API’S que foram dadas, o React Native, usado como framework para desenvolvimento do aplicativo nativo android e ios e Figma para prototipagem com a extensão Locofy.ai para exportação de código base.
 
 Durante a prototipagem foram criadas oito telas, que sustentariam a função principal do aplicativo que é tornar a fila de entregas da cantina mais transparente e simples, além disso fornecer outro método de pagamento que não exigisse comparecimento ao balcão. 
