@@ -13,6 +13,8 @@
     "react-native": "0.70.8",
     "axios": "*",
     "react-is": "^16.8.0",
+    "expo-font": "~11.0.1",
+    "expo-image": "*",
     "lottie-ios": "3.4.0",
     "@babel/core": "^7.12.9",
     "@rneui/base": "4.0.0-rc.7",
@@ -38,9 +40,7 @@
     "@expo-google-fonts/montserrat": "*",
     "@react-navigation/bottom-tabs": "*",
     "@react-navigation/native-stack": "*",
-    "react-native-safe-area-context": "4.4.1",
-    "expo-image": "*",
-    "expo-font": "~11.0.1"
+    "react-native-safe-area-context": "4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
