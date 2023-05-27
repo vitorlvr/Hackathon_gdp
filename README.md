@@ -1,12 +1,12 @@
-#Hackaton IDP - 27/05/2023
+# Hackaton IDP - 27/05/2023
 
-##Nome dos integrantes:
+## Nome dos integrantes:
 Tiago de Jesus Chehab – 2211194
 João Gabriel Abreu Macedo –  2211131
 Petrus Davi de Oliveira Sampaio  – 2211132
 Tiago de Jesus Chehab – 2211194 
 
-##Relatório Hackathon IDP
+## Relatório Hackathon IDP
 Durante os dias 25, 26 e 27 de maio de 2023, os cursos de tecnologia  da faculdade IDP se  organizaram para o evento do Hackathon, sendo um evento motivado para a melhoria da própria instituição. O evento foi dividido em grupos de quatro estudantes de qualquer semestre, e assim foi criado nosso grupo.
 
 A equipe Garotos de Programa decidiu seguir pelo API de HackaRestaurante e criar uma solução focada para a cantina da faculdade. A ideia principal da equipe  é melhorar a experiência do cliente, que por diversas vezes, não é a mais satisfatória, e assim, acabam deixando de fazer um pedido, pela má organização da mesma.
@@ -27,3 +27,6 @@ Nas primeiras horas, cada membro da equipe estava focado nas suas devidas ativid
 Durante à noite os membros Petrus e João voltaram para suas devidas residências, retornando a faculdade logo pela manhã. Pela madrugada, o integrante Tiago Chehab, terminou sua parte de relacionar o Javascript com o backend, entretanto houve um problema na conexão do API que resultou na demora do upload do segundo API no github. No decorrer da noite, Tiago ajudou Vitor no processo de desenvolvimento do aplicativo, auxiliando nas funções e nos reacts necessários.
 
 Pela manhã, os integrantes que não passaram à noite na faculdade, chegaram e concluíram suas devidas partes. Desta forma, durante a manhã e tarde, houve a consolidação de todas as partes e gerando o projeto que desenvolvemos.
+
+A partir das 18:00 do dia 27 de maio de 2023, o projeto foi apresentado para a equipe do
+Hackaton e avaliado.
