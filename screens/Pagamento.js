@@ -12,7 +12,10 @@ const Pagamento = () => {
   const voltaMenu = () => {
     navigation.navigate('TiposDeProdutos');
   };
-  
+  const filaPedido = () => {
+    navigation.navigate('FilaDePedidos');
+  };
+
   return (
     <View style={styles.pagamento}>
       <View style={styles.topo}>
@@ -49,7 +52,7 @@ const Pagamento = () => {
           source={require("../assets/vector.png")}
         />
       </View>
-      <TouchableOpacity style={[styles.pagarWrapper, styles.wrapperParentPosition]}>
+      <TouchableOpacity style={[styles.pagarWrapper, styles.wrapperParentPosition]}onPress={filaPedido}>
         <Text style={styles.pagar}>Pagar</Text>
       </TouchableOpacity>
       <View style={[styles.crepeDeFrangoParent, styles.wrapperParentPosition]}>

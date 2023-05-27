@@ -35,15 +35,15 @@ const App = () => {
     <NavigationContainer>
       {hideSplashScreen ? (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Home1" component={Home1Icon} />
           <Stack.Screen name="Login" component={LoginIcon} />
-          <Stack.Screen name="Carrinhop" component={Carrinhop} />
-          <Stack.Screen name="TiposDeProdutos" component={TiposDeProdutos} />
+          <Stack.Screen name="Cadastro" component={CadastroIcon} />
           <Stack.Screen name="TelaDeTiposDeProduto" component={TelaDeTiposDeProduto}/>
+          <Stack.Screen name="TiposDeProdutos" component={TiposDeProdutos} />
+          <Stack.Screen name="Carrinhop" component={Carrinhop} />
+          <Stack.Screen name="Pagamento" component={Pagamento} />
           <Stack.Screen name="FilaDePedidos" component={FilaDePedidos} />
           <Stack.Screen name="PedidoPronto" component={PedidoPronto} />
-          <Stack.Screen name="Home1" component={Home1Icon} />
-          <Stack.Screen name="Pagamento" component={Pagamento} />
-          <Stack.Screen name="Cadastro" component={CadastroIcon} />
         </Stack.Navigator>
       ) : null}
     </NavigationContainer>

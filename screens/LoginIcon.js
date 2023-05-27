@@ -2,16 +2,24 @@ import * as React from "react";
 import { ImageBackground, StyleSheet, Dimensions } from "react-native";
 import PagLogin from "../components/PagLogin";
 import { useNavigation } from '@react-navigation/native';
-import CadastroIcon from "../screens/CadastroIcon";
-
+import CadastroIcon from "./CadastroIcon";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Button } from 'react-native';
+import Home1Icon from "./Home1Icon";
 
 const LoginIcon = () => {
 
   const navigation = useNavigation();
 
   const cadastro = () => {
-    navigation.navigate('CadastroIcon');
+    navigation.navigate('Cadastro');
   };
+
+  const tabelaproduto = () => {
+    navigation.navigate('TelaDeTipoTabelaproduto');
+  };
+  
 
   return (
     <ImageBackground

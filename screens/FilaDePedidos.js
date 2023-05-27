@@ -2,10 +2,20 @@ import * as React from "react";
 import { Text, StyleSheet, View } from "react-native";
 import Frame from "../components/Frame";
 import { Padding, Color, FontFamily, FontSize } from "../GlobalStyles";
+import { useNavigation } from '@react-navigation/native';
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import PedidoPronto from "./PedidoPronto";
 
 const FilaDePedidos = () => {
+  const navigation = useNavigation();
+  const handleScreenPress = () => {
+    navigation.navigate('PedidoPronto');
+  };
+
   return (
+    
     <View style={styles.filaDePedidos}>
+      <TouchableWithoutFeedback onPress={handleScreenPress}>
       <Frame
         seuPedidoEstPronto="Aguente firme! Seu pedido está vindo"
         seuPedidoEstProntoBackgroundColor="#e3e3e3"
@@ -51,7 +61,9 @@ const FilaDePedidos = () => {
           <Text style={styles.text}>327</Text>
         </View>
       </View>
+      </TouchableWithoutFeedback>
     </View>
+    
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRef } from "react";
 import {
   Text,
   StyleSheet,
@@ -6,19 +7,37 @@ import {
   TextInput,
   Pressable,
   ImageBackground,
-  Image 
+  Image,
+  TouchableWithoutFeedback,
+  Keyboard
 } from "react-native";
 import { Color, FontFamily, FontSize, Padding } from "../GlobalStyles";
 
+import LoginIcon from "./LoginIcon";
+import { useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+
 const CadastroIcon = () => {
   const [emailTextInput, setEmailTextInput] = useState("Email");
+  const handleScreenPress = () => {
+    Keyboard.dismiss();
+  };
 
+  const navigation = useNavigation();
+
+  const login = () => {
+    navigation.navigate('Login');
+  };
   return (
+    
     <ImageBackground
       style={[styles.cadastroIcon, styles.nomeFlexBox]}
       resizeMode="cover"
       source={require("../assets/cadastro.png")}
     >
+      <TouchableWithoutFeedback onPress={handleScreenPress}>
       <View style={[styles.logoParent, styles.logoFlexBox]}>
         <View style={[styles.logo, styles.logoFlexBox]}>
           <View style={styles.logoInner}>
@@ -58,9 +77,13 @@ const CadastroIcon = () => {
             placeholderTextColor="#000"
           />
           <View style={[styles.celular, styles.emailFlexBox]}>
-            <Text style={[styles.celularOpcional, styles.nomeTypo]}>
-              Celular (opcional)
-            </Text>
+            <TextInput
+            style={[styles.celularOpcional, styles.celularOpcionalFlexBox]}
+            placeholder="celular"
+            keyboardType="number-pad"
+            autoCapitalize="none"
+            placeholderTextColor="#000"
+          />
           </View>
           <TextInput
             style={[styles.email, styles.emailFlexBox]}
@@ -75,11 +98,13 @@ const CadastroIcon = () => {
               Confirme sua senha
             </Text>
           </View>
-          <Pressable style={[styles.finalizar, styles.emailFlexBox]}>
+          <Pressable style={[styles.finalizar, styles.emailFlexBox]} onPress={login}>
             <Text style={[styles.cadastrar, styles.nomeTypo]}>Cadastrar</Text>
+          
           </Pressable>
         </View>
       </View>
+      </TouchableWithoutFeedback>
     </ImageBackground>
   );
 };

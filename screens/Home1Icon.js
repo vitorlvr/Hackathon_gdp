@@ -1,9 +1,47 @@
 import * as React from "react";
 import { Text, StyleSheet, View, ImageBackground, Image, Dimensions } from "react-native";
 import { Color, FontFamily, FontSize } from "../GlobalStyles";
+import { useEffect } from "react";
+import { useNavigation } from '@react-navigation/native';
+import LoginIcon from "../screens/LoginIcon";
 
 const Home1Icon = () => {
-  return (
+  
+    const navigation = useNavigation();
+  
+    useEffect(() => {
+      // Set a timer to navigate after 3 seconds
+      const timer = setTimeout(() => {
+        navigation.navigate('Login');
+      }, 2000);
+  
+      // Clear the timer when the component is unmounted
+      return () => clearTimeout(timer);
+    }, []);
+    return (
+      <ImageBackground
+        style={[styles.home1Icon, styles.iconLayout]}
+        resizeMode="cover"
+        source={require("../assets/home1.png")}
+      >
+        <Text style={[styles.bemVindo, styles.cantinaFlexBox]}>Bem-vindo à</Text>
+        <View style={styles.logo}>
+          <Text style={[styles.cantina, styles.cantinaFlexBox]}>cantina</Text>
+          <Image
+            style={[styles.idIdp1Icon, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/ididp-1.png")}
+          />
+        </View>
+      </ImageBackground>
+      
+    );
+    
+  
+  
+
+
+      return (
     <ImageBackground
       style={[styles.home1Icon, styles.iconLayout]}
       resizeMode="cover"
@@ -19,6 +57,7 @@ const Home1Icon = () => {
         />
       </View>
     </ImageBackground>
+    
   );
 };
 

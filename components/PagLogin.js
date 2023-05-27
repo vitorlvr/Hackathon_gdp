@@ -3,12 +3,16 @@ import { Text, StyleSheet, View, TextInput, Pressable, Image, TouchableOpacity }
 import { Color, FontFamily, FontSize, Padding } from "../GlobalStyles";
 import { useNavigation } from '@react-navigation/native';
 import CadastroIcon from "../screens/CadastroIcon";
+import TelaDeTiposDeProduto from "../screens/TelaDeTiposDeProduto";
+
 
 const PagLogin = () => {
   const navigation = useNavigation();
-
   const cadastro = () => {
-    navigation.navigate('CadastroIcon');
+    navigation.navigate('Cadastro');
+  };
+  const tabelaproduto = () => {
+    navigation.navigate('TelaDeTiposDeProduto');
   };
   
   return (
@@ -40,7 +44,10 @@ const PagLogin = () => {
         placeholderTextColor="#000"
       />
       <View style={[styles.entrar, styles.entrarFlexBox]}>
+        
+      <TouchableOpacity onPress={tabelaproduto}>
         <Text style={[styles.entrar1, styles.senhaTypo]}>entrar</Text>
+      </TouchableOpacity>
       </View>
       <TouchableOpacity onPress={cadastro}>
         <Text style={[styles.aindaNo, styles.senhaTypo]}>
