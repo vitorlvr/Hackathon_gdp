@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ImageBackground, StyleSheet } from "react-native";
+import { ImageBackground, StyleSheet, Dimensions } from "react-native";
 import PagLogin from "../components/PagLogin";
 
 const LoginIcon = () => {
@@ -14,11 +14,13 @@ const LoginIcon = () => {
   );
 };
 
+const deviceHeight = Dimensions.get("window").height;
+
 const styles = StyleSheet.create({
   loginIcon: {
     flex: 1,
     width: "100%",
-    height: 812,
+    height: deviceHeight,
     overflow: "hidden",
     paddingHorizontal: 0,
     paddingVertical: 43,

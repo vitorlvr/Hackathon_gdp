@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Pressable, Text, StyleSheet, View } from "react-native";
-import { Image } from "expo-image";
+import { Pressable, Text, StyleSheet, View, Image  } from "react-native";
 import AllProducts from "../components/AllProducts";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
@@ -96,7 +95,7 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
   },
   topo: {
-    marginTop: -369,
+    marginTop: -360,
     marginLeft: -138.5,
     top: "50%",
     width: 277,
@@ -108,6 +107,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.white,
     width: "100%",
     height: 812,
+    marginBottom: 0,
     overflow: "hidden",
     flex: 1,
   },

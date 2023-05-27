@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Text, StyleSheet, View, TextInput, Pressable } from "react-native";
-import { Image } from "expo-image";
+import { Text, StyleSheet, View, TextInput, Pressable, Image  } from "react-native";
 import { Color, FontFamily, FontSize, Padding } from "../GlobalStyles";
 
 const PagLogin = () => {
@@ -59,7 +58,8 @@ const styles = StyleSheet.create({
   },
   cantina: {
     fontFamily: FontFamily.inikaRegular,
-    fontSize: FontSize.size_base,
+    fontSize: 18,
+    marginBottom: 15,
     textAlign: "center",
     color: Color.white,
     alignSelf: "stretch",
@@ -71,16 +71,16 @@ const styles = StyleSheet.create({
     marginTop: -7,
   },
   cantinaParent: {
-    width: 100,
+    width: 120,
   },
   logo: {
-    paddingHorizontal: Padding.p_3xs,
-    paddingVertical: Padding.p_135xl,
+    paddingHorizontal: 100,
+    paddingVertical: 100,
     justifyContent: "space-between",
     flexDirection: "row",
   },
   nomeUsuario: {
-    width: 187,
+    width: 250,
     marginTop: 16,
     paddingVertical: Padding.p_4xs,
     paddingHorizontal: Padding.p_xs,
@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   senha: {
+    width: 250,
     marginTop: 16,
     paddingVertical: Padding.p_4xs,
     paddingHorizontal: Padding.p_xs,
@@ -99,19 +100,19 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     flexDirection: "row",
     alignItems: "center",
-    alignSelf: "stretch",
   },
   entrar1: {
     textAlign: "center",
     color: Color.white,
+    width: 200,
   },
   entrar: {
     backgroundColor: Color.blueviolet,
-    paddingLeft: Padding.p_xs,
-    paddingTop: Padding.p_4xs,
-    paddingRight: Padding.p_mid,
-    paddingBottom: Padding.p_4xs,
+    width: 250,
     marginTop: 16,
+    marginLeft: 36,
+    paddingVertical: Padding.p_4xs,
+    paddingHorizontal: Padding.p_xs,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",

@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Image } from "expo-image";
 import {
   StyleSheet,
   Text,
   View,
   Pressable,
   ImageBackground,
+  Image
 } from "react-native";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
 
@@ -275,14 +275,14 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
   },
   frameParent: {
-    alignItems: "flex-end",
+    alignItems: "center",
     alignSelf: "stretch",
+    paddingHorizontal: 25,
   },
   telaDeTiposDeProduto: {
     flex: 1,
     width: "100%",
-    paddingHorizontal: 34,
-    paddingVertical: 27,
+    paddingVertical: 47,
     overflow: "hidden",
   },
 });

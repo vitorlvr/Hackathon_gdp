@@ -6,8 +6,8 @@ import {
   TextInput,
   Pressable,
   ImageBackground,
+  Image 
 } from "react-native";
-import { Image } from "expo-image";
 import { Color, FontFamily, FontSize, Padding } from "../GlobalStyles";
 
 const CadastroIcon = () => {
@@ -157,7 +157,6 @@ const styles = StyleSheet.create({
   },
   celularOpcional: {
     color: Color.black,
-    textAlign: "center",
     flex: 1,
   },
   celular: {
@@ -172,7 +171,7 @@ const styles = StyleSheet.create({
   },
   finalizar: {
     backgroundColor: Color.blueviolet,
-    width: 117,
+    width: 127,
     padding: Padding.p_4xs,
     justifyContent: "center",
   },

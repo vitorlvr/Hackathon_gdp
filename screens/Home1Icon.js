@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Text, StyleSheet, View, ImageBackground } from "react-native";
-import { Image } from "expo-image";
+import { Text, StyleSheet, View, ImageBackground, Image, Dimensions } from "react-native";
 import { Color, FontFamily, FontSize } from "../GlobalStyles";
 
 const Home1Icon = () => {
@@ -23,6 +22,7 @@ const Home1Icon = () => {
   );
 };
 
+
 const styles = StyleSheet.create({
   iconLayout: {
     overflow: "hidden",
@@ -33,12 +33,17 @@ const styles = StyleSheet.create({
     color: Color.white,
     fontFamily: FontFamily.inikaRegular,
     alignSelf: "stretch",
+    padding: 0
   },
   bemVindo: {
     fontSize: 48,
+    marginTop: -20,
+    marginBottom: 10,
   },
   cantina: {
-    fontSize: FontSize.size_base,
+    fontSize: 28,
+    marginTop: -10,
+    marginBottom: 40,
   },
   idIdp1Icon: {
     maxWidth: "100%",
@@ -54,8 +59,8 @@ const styles = StyleSheet.create({
   },
   home1Icon: {
     flex: 1,
-    paddingHorizontal: 48,
-    paddingVertical: 258,
+    paddingHorizontal: 0,
+    paddingVertical: 300,
     justifyContent: "flex-end",
     alignItems: "center",
   },
